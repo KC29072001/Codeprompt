@@ -10,9 +10,10 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # Initialize OpenAI client
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='yourkey')
 
 # Define preprocess_input function
+
 def preprocess_input(text):
     tokens = word_tokenize(text)
     tokens = [word.lower() for word in tokens if word.isalnum() and word.lower() not in stopwords.words('english')]
