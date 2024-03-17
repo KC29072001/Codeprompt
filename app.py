@@ -1,10 +1,22 @@
+# import streamlit as st
+# import nltk
+# from nltk.tokenize import word_tokenize
+# from nltk.corpus import stopwords
+# from langchain_community.document_loaders import TextLoader
+# # from langchain.document_loaders import TextLoader
+# from openai import OpenAI
+
+import os
 import streamlit as st
-import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-from langchain_community.document_loaders import TextLoader
-# from langchain.document_loaders import TextLoader
+from langchain.document_loaders import TextLoader
 from openai import OpenAI
+import nltk
+
+# Set NLTK data path relative to the root folder
+nltk_data_path = os.path.join(os.getcwd(), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
 
 # Download NLTK resources
 nltk.download('punkt')
