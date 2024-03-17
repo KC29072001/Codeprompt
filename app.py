@@ -8,11 +8,12 @@
 
 import os
 import streamlit as st
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from langchain.document_loaders import TextLoader
 from openai import OpenAI
-import nltk
+
 
 # Set NLTK data path relative to the root folder
 nltk_data_path = os.path.join(os.getcwd(), 'nltk_data')
