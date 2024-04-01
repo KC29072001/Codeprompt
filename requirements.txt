@@ -3,4 +3,3 @@ nltk
 langchain
 openai
 python-dotenv
-config
