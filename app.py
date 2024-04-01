@@ -90,14 +90,14 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-api_key = os.getenv("API_KEY")
+apikey = os.getenv("API_KEY")
 
 # Download NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
 
 # Initialize OpenAI client
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key= apikey)
 
 # Define preprocess_input function
 def preprocess_input(text):
