@@ -6,6 +6,13 @@ from nltk.corpus import stopwords
 from langchain.document_loaders import TextLoader
 from openai import OpenAI
 
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+api_key = os.getenv("API_KEY")
+
 # import os
 # import streamlit as st
 # import nltk
@@ -24,7 +31,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # Initialize OpenAI client
-client = OpenAI(api_key='yourkey')
+client = OpenAI(api_key=api_key)
 
 # Define preprocess_input function
 
