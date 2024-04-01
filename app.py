@@ -86,18 +86,19 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from openai import OpenAI
+from config import OPENAI_API_KEY
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-apikey = os.getenv("API_KEY")
+OPENAI_API_KEY = os.getenv("API_KEY")
 
 # Download NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
 
 # Initialize OpenAI client
-client = OpenAI(api_key= apikey)
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Define preprocess_input function
 def preprocess_input(text):
