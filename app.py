@@ -86,12 +86,11 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from openai import OpenAI
-from config import OPENAI_API_KEY
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-OPENAI_API_KEY = os.getenv("API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Download NLTK resources
 nltk.download('punkt')
