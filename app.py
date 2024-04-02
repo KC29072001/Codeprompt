@@ -17,7 +17,8 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # Initialize OpenAI client
-client = OpenAI(api_key=API_KEY)
+client = OpenAI.api_key=API_KEY
+
 
 
 # Define preprocess_input function
