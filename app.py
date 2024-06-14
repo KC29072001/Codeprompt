@@ -44,7 +44,7 @@ def generate_code(text):
     return response.choices[0].message.content
 
     # Extracting the generated code from the response
-    return response.choices[0].message.content
+    # return response.choices[0].message.content
 
 # Streamlit UI
 st.title("Code Generation from Text")
