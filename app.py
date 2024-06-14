@@ -3,9 +3,10 @@ import streamlit as st
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-from openai import OpenAI
+# from openai import OpenAI
 import os
 from dotenv import load_dotenv
+import openai
 
 load_dotenv()
 API_KEY = os.getenv("OPENAI_API_KEY")
@@ -17,8 +18,8 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # Initialize OpenAI client
-client = OpenAI.api_key=API_KEY
-
+# client = OpenAI.api_key=API_KEY
+openai.api_key = API_KEY
 
 
 # Define preprocess_input function
@@ -33,7 +34,7 @@ def generate_code(text):
     prompt = f"Translate the following natural language description into code:\n\n{text}\n\nCode:"
 
     # Requesting code generation from GPT-3
-    response = client.chat.completions.create(
+    response = openai.chat.completions.create(
         messages=[{'role': 'user', 'content': text}],
         temperature=0,  
         model="gpt-3.5-turbo",
